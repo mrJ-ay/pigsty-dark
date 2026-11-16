@@ -2151,3 +2151,92 @@ textarea {
     color: #f87171 !important;
     border: 1px solid rgba(239, 68, 68, 0.4) !important;
 }
+
+
+/* Fix unreadable dark text on dark cards, post detail, comments, galleries, and modals */
+.post-card,
+.post-card h2,
+.post-title,
+.post-content,
+.post-author,
+.post-list-main,
+.detail-modal-box,
+.detail-content,
+.detail-meta,
+.comments-section,
+.comments-section h3,
+.comment-item,
+.comment-author,
+.comment-content,
+.comment-text,
+.modal-box,
+.modal-box h2,
+.modal-box h3,
+.modal-box p,
+.modal-box label,
+.gallery-header-info h2,
+.gallery-dir-card,
+.gallery-dir-card strong,
+.gallery-dir-header h3 {
+    color: #f3f4f6 !important;
+}
+
+.post-date,
+.post-meta-stats,
+.detail-meta,
+.comment-date,
+.gallery-header-info p,
+.gallery-dir-desc,
+.gallery-dir-meta,
+.empty-posts p {
+    color: #9ca3af !important;
+}
+
+.post-gallery-tag {
+    color: #ff6b8b !important;
+    background: rgba(255, 42, 85, 0.14) !important;
+    border-color: rgba(255, 42, 85, 0.35) !important;
+}
+
+.like-btn,
+.like-btn.compact,
+.tag-list span,
+.post-tags span,
+.comment-delete-btn,
+.detail-delete-btn,
+.modal-box .close,
+.search-btn {
+    background: #141b27 !important;
+    color: #e5e7eb !important;
+    border-color: #2b374b !important;
+}
+
+.comment-item,
+.gallery-dir-card {
+    background: #141b27 !important;
+    border-color: #243044 !important;
+}
+
+.detail-content {
+    background: #0b0f17 !important;
+    border: 1px solid #1f2937 !important;
+    border-radius: 10px;
+    padding: 16px !important;
+}
+
+.side-card.warning {
+    background: #1c1418 !important;
+    border-color: #4b2330 !important;
+}
+
+.side-card.warning h3 {
+    color: #ff6b8b !important;
+}
+
+.side-card.warning p {
+    color: #cbd5e1 !important;
+}
+
+.username {
+    color: #f3f4f6 !important;
+}

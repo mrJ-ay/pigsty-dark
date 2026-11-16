@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PIGSTY // DARKNET</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css?v=dark1"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     Header
+========================== -->
+
+<header class="header">
+
+    <div class="logo">PIGSTY // DARK</div>
+
+
+    <nav>
+
+        <a
+            class="active"
+            href="#"
+        >
+            홈
+        </a>
+
+        <a href="#">
+            인기
+        </a>
+
+        <a href="#">
+            갤러리
+        </a>
+
+        <a
+            href="https://oneid-helpdesk.onrender.com/?service=PIGSTY"
+            target="_blank"
+            rel="noopener"
+        >
+            고객센터
+        </a>
+
+        <a
+            href="#"
+            id="adminNavLink"
+            class="admin-nav-link"
+            style="display: none;"
+        >
+            관리자
+        </a>
+
+    </nav>
+
+
+    <div class="header-right">
+
+        <button
+            class="search-btn"
+            type="button"
+        >
+            ⌕
+        </button>
+
+
+        <div id="authArea">
+
+            <button
+                class="login-btn"
+                id="loginBtn"
+                type="button"
+            >
+                로그인
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     Main
+========================== -->
+
+<main>
+
+
+    <!-- Welcome -->
+
+    <section class="welcome">
+
+        <div>
+
+            <span class="badge">
+                DEEP WEB · NO CENSOR
+            </span>
+
+
+            <h1>
+                검열 없는 심연의 공간
+            </h1>
+
+
+            <p>
+                금칙어 필터와 검열봇이 완전히 해제된 무검열 커뮤니티입니다.
+            </p>
+
+        </div>
+
+
+        <button
+            class="write-btn"
+            type="button"
+        >
+            글쓰기
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         Content
+    ========================== -->
+
+
+
+    <div class="layout">
+
+
+        <!-- Feed -->
+
+        <section class="feed">
+
+            <div id="galleryHeaderBar" class="gallery-header-bar" style="display: none;">
+                <div class="gallery-header-top">
+                    <div class="gallery-header-info">
+                        <div class="gallery-title-row">
+                            <h2 id="currentGalleryTitle">전체 갤러리</h2>
+                            <span id="currentGalleryBadge" class="gallery-type-badge">통합</span>
+                        </div>
+                        <p id="currentGalleryDesc">모든 갤러리의 최신 글을 한눈에 볼 수 있습니다.</p>
+                    </div>
+                    <div class="gallery-mode-btns">
+                        <button id="modeAllBtn" class="mode-btn active" type="button">전체글</button>
+                        <button id="modeConceptBtn" class="mode-btn concept" type="button">★ 개념글</button>
+                        <button id="createGalleryBtn" class="create-gallery-btn" type="button">+ 갤러리 개설</button>
+                    </div>
+                </div>
+                <div id="galleryBarList" class="gallery-pill-list">
+                    <button class="gallery-pill active" data-slug="all" type="button">전체글</button>
+                </div>
+            </div>
+
+
+            <div class="feed-header">
+
+                <div class="tabs">
+
+                    <button
+                        class="selected"
+                        type="button"
+                    >
+                        최신
+                    </button>
+
+
+                    <button
+                        type="button"
+                    >
+                        인기
+                    </button>
+
+                </div>
+
+
+                <div class="feed-controls">
+                    <button id="feedConceptBtn" class="feed-concept-btn" type="button">★ 개념글</button>
+                    <select id="feedGallerySelect" aria-label="갤러리 선택">
+                        <option value="all">전체 갤러리</option>
+                    </select>
+
+                    <select id="sortSelect">
+
+                    <option value="latest">
+                        최신순
+                    </option>
+
+                    <option value="popular">
+                        인기순
+                    </option>
+
+                </select>
+                </div>
+
+
+                <!-- 관리자용 전체 삭제 버튼 -->
+
+                <button
+                    id="deleteAllPostsBtn"
+                    class="delete-all-btn"
+                    type="button"
+                    style="display: none;"
+                >
+                    전체 게시물 삭제
+                </button>
+
+            </div>
+
+
+
+            <!-- Posts -->
+
+            <div
+                id="posts"
+                class="posts"
+            >
+
+                <div class="empty-posts">
+
+                    <h3>
+                        게시물을 불러오는 중...
+                    </h3>
+
+                    <p>
+                        잠시만 기다려주세요.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             Sidebar
+        ========================== -->
+
+        <aside>
+
+
+            <div class="side-card">
+
+                <h3>
+                    PIGSTY
+                </h3>
+
+                <p>
+                    서로의 취향을 존중하며
+                    자유롭게 이야기를 나누는
+                    커뮤니티입니다.
+                </p>
+
+            </div>
+
+
+
+            <div class="side-card">
+
+                <h3>
+                    인기 태그
+                </h3>
+
+
+                <div class="tag-list">
+
+                    <span>
+                        #일상
+                    </span>
+
+                    <span>
+                        #취미
+                    </span>
+
+                    <span>
+                        #사진
+                    </span>
+
+                    <span>
+                        #이야기
+                    </span>
+
+                    <span>
+                        #자유
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="side-card warning">
+
+                <h3>
+                    커뮤니티 이용 안내
+                </h3>
+
+                <p>
+                    다른 이용자를 존중하고
+                    불법적이거나 타인에게
+                    피해를 주는 콘텐츠는
+                    게시하지 마세요.
+                    도배 또한 금지됩니다.
+                    그리고 부적절한 영상 또한
+                    금지됩니다.
+                </p>
+
+            </div>
+                        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dearjeahoon" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="개발자 커피 사주기" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+            
+              
+                    
+              
+                 
+                 
+                 
+                
+              
+            
+
+
+            <!-- Censor Bot Widget -->
+            <div class="side-card censor-bot-card">
+                <div class="censor-bot-header">
+                    <div class="censor-bot-title">
+                        <span class="bot-status-dot"></span>
+                        <h3>검열봇 OFF (무검열)</h3>
+                    </div>
+                    <span id="censorBotBadge" class="censor-badge active-state">비활성</span>
+                </div>
+                <p class="censor-bot-desc">
+                    이 구역에서는 금칙어·자모분해·자동 격리가 작동하지 않습니다.
+                </p>
+            </div>
+
+        </aside>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================
+     JavaScript
+========================== -->
+
+<script src="oneid-config.js"></script>
+<script
+    src="script.js?v=dark1"
+></script>
+
+
+</body>
+
+</html>
